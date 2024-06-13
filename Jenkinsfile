@@ -11,4 +11,12 @@ pipeline {
       }
     }
   }
+
+  stages {
+    stage('building the arifact') {
+      steps {
+        sh 'mvn clean deploy'
+      }
+    }
+  }
 }
