@@ -29,7 +29,7 @@ pipeline {
             steps {                                       // Defines steps to be executed within the 'SonarQube analysis' stage
                 script {                                    // Defines a script block to be executed
                     withSonarQubeEnv('sonarqube-server') { // Sets the SonarQube server name
-                        sh "$(scannerHome)/bin/sonar-scanner" // Executes the SonarQube scanner to perform code analysis
+                        sh "$(scannerHome)/bin/sonar-scanner\$" // Executes the SonarQube scanner to perform code analysis
                     }
                 }
             }
