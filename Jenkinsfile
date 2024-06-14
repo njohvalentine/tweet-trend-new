@@ -1,7 +1,9 @@
 
 pipeline {
                                                          // Defines the entire pipeline script
-    agent { [Label 'maven'] }                          // Specifies the agent (slave) with label 'maven' to run the pipeline
+    agent {
+        label 'maven'  // Single quotes are preferred for labels
+}                         // Specifies the agent (slave) with label 'maven' to run the pipeline
 
     stages {                                           // Defines different stages of the pipeline
         stage('build') {                               // Defines a stage named 'build'
